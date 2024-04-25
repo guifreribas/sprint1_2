@@ -144,6 +144,9 @@ h6 {
   letter-spacing: 0.7ch;
   font-size: 0.875rem;
 }
+.footerBanner__input {
+  height: 48px !important;
+}
 .footerBanner__input::placeholder {
   color: rgba(0, 0, 0, 0.3) !important;
 }
@@ -187,6 +190,7 @@ h6 {
 }
 .footer__icons {
   display: flex;
+  align-items: center;
   gap: 36px;
   padding-inline: 16px;
 }
@@ -278,6 +282,50 @@ h6 {
 
 .accordion-button:hover {
   color: #FA5959 !important;
+}
+
+@media screen and (width <= 768px) {
+  p {
+    font-size: 0.875rem;
+  }
+  .nav-tabs {
+    border: none !important;
+    border-top: 1px solid rgba(95, 95, 105, 0.2) !important;
+  }
+  .nav-link {
+    border-radius: none !important;
+    border-bottom: 1px solid rgba(95, 95, 105, 0.2) !important;
+  }
+  .footerBanner__text {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+  .footerBanner__form {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footerBanner__submitBtn {
+    width: 100%;
+  }
+  .footer__indoorContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    padding-block: 20px;
+  }
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .footer__icons {
+    margin-block: 8px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

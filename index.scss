@@ -89,7 +89,6 @@ h6 {
 .myCard {
     box-sizing: border-box;
     width: fit-content;
-    // min-width: 280px;
     border-radius: 16px;
     box-shadow: 0 6px 6px rgba(81, 102, 221, 0.2);
     border: none;
@@ -99,14 +98,6 @@ h6 {
     align-items: center;
     padding: 60px 20px 20px 20px;
     overflow: hidden;
-
-    // &--chrome {
-    //     translate: 0 -40px;
-    // }
-
-    // &--opera {
-    //     translate: 0 40px;
-    // }
 
     &__img {
         width: 100%;
@@ -148,8 +139,6 @@ h6 {
 
     width: 100%;
     height: auto;
-    // height: 100%;
-    // max-height: 344px;
     overflow: hidden;
 
     &::before {
@@ -182,10 +171,6 @@ h6 {
     }
 }
 
-
-
-
-
 .footerBanner {
 
     &__text {
@@ -194,6 +179,8 @@ h6 {
     }
 
     &__input {
+        height: 48px !important;
+
         &::placeholder {
             color: rgba(0, 0, 0, 0.3) !important;
         }
@@ -244,6 +231,7 @@ h6 {
 
     &__icons {
         display: flex;
+        align-items: center;
         gap: 36px;
         padding-inline: 16px;
     }
@@ -334,6 +322,7 @@ h6 {
 }
 
 
+
 .nav-link {
     border: none !important;
     color: $text-color !important;
@@ -359,5 +348,63 @@ h6 {
 .accordion-button {
     &:hover {
         color: $secondary-color !important;
+    }
+}
+
+@media screen and (width <=768px) {
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .nav-tabs {
+        border: none !important;
+        border-top: 1px solid rgba(95, 95, 105, 0.2) !important;
+    }
+
+    .nav-link {
+        border-radius: none !important;
+        border-bottom: 1px solid rgba(95, 95, 105, 0.2) !important;
+    }
+
+    .footerBanner {
+        &__text {
+            font-size: 0.75rem;
+            margin: 0;
+        }
+
+        &__form {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__submitBtn {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        &__indoorContainer {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            padding-block: 20px;
+        }
+
+        &__links {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__icons {
+            margin-block: 8px;
+        }
+
     }
 }

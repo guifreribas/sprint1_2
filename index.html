@@ -16,7 +16,7 @@
 
   <body>
     <header class="container-fluid fixed-top">
-      <nav class="navbar navbar-expand-md navbar-light m-auto d-flex align-center myNavbar">
+      <nav class="navbar navbar-expand-md navbar-light m-auto d-flex align-center myNavbar p-4">
         <img src="./images/logo-bookmark.svg" alt="Logo de Bookmark" class="m-8 p-2 mw-25 ml-0 m-md-auto" />
         <button
           class="navbar-toggler"
@@ -43,7 +43,7 @@
     </header>
     <div class="myDiv"></div>
 
-    <article class="container my-5 pt-5 d-flex align-center justify-content-center" style="max-width: 1100px">
+    <article class="container px-4 my-5 pt-5 d-flex align-center justify-content-center" style="max-width: 1100px">
       <div class="row gap-5 gap-md-0 pt-5">
         <section class="col-auto col-md order-1 order-md-0 d-flex flex-column align-center m-auto px-4">
           <h1 class="py-2 fs-1 text-center text-md-start">A Simple Bookmark Manager</h1>
@@ -51,8 +51,8 @@
             A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantaly. Try for free
           </p>
           <div class="d-flex flex-wrap gap-3 py-2 justify-content-center justify-content-md-start">
-            <button class="btn btn-primary px-4">Get it on Chrome</button>
-            <button class="btn btn-info px-4">Get it on Firefox</button>
+            <button class="btn btn-primary px-3" style="font-size: 0.75rem">Get it on Chrome</button>
+            <button class="btn btn-info px-3" style="font-size: 0.75rem">Get it on Firefox</button>
           </div>
         </section>
 
@@ -62,7 +62,7 @@
       </div>
     </article>
 
-    <article class="container my-5 pb-5" id="features" style="max-width: 1100px">
+    <article class="container px-4 my-5 pb-5" id="features" style="max-width: 1100px">
       <div class="row">
         <div class="col">
           <section class="m-auto d-flex flex-column mb-3">
@@ -75,34 +75,36 @@
         </div>
       </div>
 
-      <div class="row py-3 m-auto" style="width: fit-content">
-        <ul class="nav nav-tabs d-flex justify-content-center py-4m gap-5 m-auto p-0 col" id="tabs">
-          <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" href="#simple">Simple Bookmarking</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#speedy">Speedy Searching</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#easy">Easy Sharing</a>
-          </li>
+      <div class="row py-3 m-auto px-4" style="width: fit-content">
+        <ul class="nav nav-tabs container py-4m gap-5 m-auto p-0 col" id="tabs">
+          <div class="row gap-1">
+            <li class="nav-item col-12 col-md-auto">
+              <a class="nav-link active text-center text-md-start" data-bs-toggle="tab" href="#simple">Simple Bookmarking</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto text-center text-md-start">
+              <a class="nav-link" data-bs-toggle="tab" href="#speedy">Speedy Searching</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto text-center text-md-start">
+              <a class="nav-link" data-bs-toggle="tab" href="#easy">Easy Sharing</a>
+            </li>
+          </div>
         </ul>
       </div>
       <div class="row">
         <section class="tab-content my-tab col">
           <section class="tab-pane mt-5 active m-auto" id="simple">
             <div class="row gap-4">
-              <section class="col-md tab1__imgContainer border">
+              <section class="col-md tab1__imgContainer">
                 <img class="myTab__img" src="./images/illustration-features-tab-1.svg" alt="Picture that represents a computer desktop screen" />
               </section>
 
-              <section class="d-flex flex-column align-center m-auto col-md">
-                <h3>Bookmark in one click</h3>
-                <p class="text-start m-auto lh-base py-3">
+              <section class="d-flex flex-column align-center m-auto col-md p-3 p-md-0">
+                <h3 class="text-center text-md-start">Bookmark in one click</h3>
+                <p class="text-center text-md-start m-auto lh-base py-3">
                   Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourites
                   sites.
                 </p>
-                <button class="btn btn-primary my-3 fs-6">More info</button>
+                <button class="btn btn-primary my-3 fs-6 d-none d-md-block">More info</button>
               </section>
             </div>
           </section>
@@ -112,12 +114,12 @@
               <section class="col-md tab1__imgContainer p-5">
                 <img class="myTab__img myTab__img--2" src="./images/illustration-features-tab-2.svg" alt="Picture that represents a computer desktop screen" />
               </section>
-              <section class="d-flex flex-column align-center m-auto col-md">
-                <h3>Intelligent search</h3>
-                <p class="text-start m-auto lh-base py-3">
+              <section class="d-flex flex-column align-center m-auto col-md p-3 p-md-0">
+                <h3 class="text-center text-md-start">Intelligent search</h3>
+                <p class="text-center text-md-start m-auto lh-base py-3">
                   Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
                 </p>
-                <button class="btn btn-primary my-3 fs-6">More info</button>
+                <button class="btn btn-primary my-3 fs-6 d-none d-md-block">More info</button>
               </section>
             </div>
           </section>
@@ -127,12 +129,12 @@
                 <img class="myTab__img myTab__img--3" src="./images/illustration-features-tab-3.svg" alt="Picture that represents a computer desktop screen" />
                 <!-- style="max-width: 500px; width: 100%; aspect-ratio: 22/19" -->
               </section>
-              <section class="d-flex flex-column align-center m-auto col-md">
-                <h3>Share your bookmarks</h3>
-                <p class="text-start m-auto lh-base py-3">
+              <section class="d-flex flex-column align-center m-auto col-md p-3 p-md-0">
+                <h3 class="text-center text-md-start">Share your bookmarks</h3>
+                <p class="text-center text-md-start m-auto lh-base py-3">
                   Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
                 </p>
-                <button class="btn btn-primary my-3 fs-6">More info</button>
+                <button class="btn btn-primary my-3 fs-6 d-none d-md-block">More info</button>
               </section>
             </div>
           </section>
@@ -140,7 +142,7 @@
       </div>
     </article>
 
-    <article class="container-fluid m-auto align-items-center my-5 py-5">
+    <article class="container-fluid m-auto align-items-center my-md-5 py-md-5">
       <div class="row">
         <section class="col d-flex flex-column align-center m-auto" style="max-width: 550px">
           <h3 class="py-2 text-center">Download the extension</h3>
@@ -189,7 +191,7 @@
       </div>
     </article>
 
-    <article class="mt-5 py-5" style="max-width: 550px; margin: auto">
+    <article class="mt-5 py-5 px-4" style="max-width: 550px; margin: auto">
       <section class="col d-flex flex-column align-center m-auto px-4 pb-4" style="max-width: 550px">
         <h3 class="py-2 text-center">Frequently Asked Questions</h3>
         <p class="py-2 lh-base text-center">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
@@ -283,21 +285,23 @@
     </article>
 
     <footer>
-      <article class="bg-primary text-light py-5 mt-5 footerBanner" id="contact">
+      <article class="bg-primary text-light px-4 py-5 mt-5 footerBanner" id="contact">
         <section class="m-auto" style="max-width: 450px">
           <p class="lh-base text-center text-light footerBanner__text">35.000+ ALREADY JOINED</p>
-          <h3 class="py-4 text-center footerBanner__title">Stay up-to-date with what we're doing</h3>
-          <form class="d-flex justify-content-center gap-3 flex-row flex-wrap m-auto needs-validation" style="max-width: 550px">
+          <h3 class="py-3 pb-4 py-md-4 text-center fs-2 footerBanner__title">Stay up-to-date with what we're doing</h3>
+          <form
+            class="container-fluid d-flex flex-column flex-md-row justify-content-center gap-3 m-auto needs-validation footerBanner__form"
+            style="max-width: 550px"
+          >
             <input
               type="email"
-              class="form-control m-auto py-2 px-3 footerBanner__input"
+              class="form-control m-auto footerBanner__input"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter your email address"
-              style="max-width: 300px"
               required
             />
-            <button type="submit" class="btn btn-secondary py-1">Contact us</button>
+            <button type="submit" class="btn btn-secondary text-nowrap m-auto footerBanner__submitBtn">Contact us</button>
           </form>
         </section>
       </article>
